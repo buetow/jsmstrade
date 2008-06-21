@@ -1,5 +1,5 @@
 <project name="JSMSTrade QuickPanel" default="dist" basedir=".">
-  <description>This is the distributed systems simulation/learning environment!</description>
+  <description>This is a small tool to use with SMSTRADE.de!</description>
 
   <!-- set global properties for this build -->
   <property name="sources" location="sources" />
