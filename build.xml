@@ -1,5 +1,5 @@
-<project name="SMSTrade QuickPanel" default="dist" basedir=".">
-  <description>This is the distributed systems simulation/learning environment!</description>
+<project name="JSMSTrade QuickPanel" default="dist" basedir=".">
+  <description>This is a small tool to use with SMSTRADE.de!</description>
 
   <!-- set global properties for this build -->
   <property name="sources" location="sources" />
@@ -26,8 +26,8 @@
 	</manifest>
 
     <mkdir dir="${dist}/lib" />
-    <jar jarfile="${dist}/lib/SMSTrade-${DSTAMP}.jar" basedir="${classes}" manifest="MANIFEST.MF" />
-    <copy file="${dist}/lib/SMSTrade-${DSTAMP}.jar" tofile="${dist}/lib/SMSTrade-Latest.jar" />
+    <jar jarfile="${dist}/lib/JSMSTrade-${DSTAMP}.jar" basedir="${classes}" manifest="MANIFEST.MF" />
+    <copy file="${dist}/lib/JSMSTrade-${DSTAMP}.jar" tofile="${dist}/lib/JSMSTrade-Latest.jar" />
   </target>
 
   <target name="clean" description="clean up" >
@@ -38,7 +38,7 @@
   </target>
 
   <target name="rundist" depends="dist">
-  	<java jar="${dist}/lib/SMSTrade-Latest.jar" fork="true" />
+  	<java jar="${dist}/lib/JSMSTrade-Latest.jar" fork="true" />
   </target>
 
   <target name="run" depends="compile">
