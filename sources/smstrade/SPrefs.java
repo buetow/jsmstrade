@@ -1,4 +1,4 @@
-/*
+/* JSMSTrade v0.2
  * Copyright (c) 2008, 2009 Dipl.-Inform. (FH) Paul C. Buetow
  * jsmstrade@dev.buetow.org - http://jsmstrade.buetow.org
  *

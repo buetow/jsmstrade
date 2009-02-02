@@ -1,4 +1,4 @@
-/*
+/* JSMSTrade v0.2
  * Copyright (c) 2008, 2009 Dipl.-Inform. (FH) Paul C. Buetow
  * jsmstrade@dev.buetow.org - http://jsmstrade.buetow.org
  *
@@ -43,7 +43,7 @@ public class SMain extends SFrame {
     private static final int MESSAGE_MAX_LENGTH = 160;
 
     /** The program version */
-    private static final double VERSION = 0.1;
+    private static final double VERSION = 0.2;
 
     /** The save file */
     public static final String SAVE_FILE = "jsmstrade.dat";
@@ -153,6 +153,9 @@ public class SMain extends SFrame {
                 int length = textArea.getText().length();
 
                 if (length > MESSAGE_MAX_LENGTH) {
+                    int diff = length - MESSAGE_MAX_LENGTH;
+                    textArea.setText(
+                        textArea.getText().substring(0, length-diff));
                     ke.consume();
 
                 } else {
