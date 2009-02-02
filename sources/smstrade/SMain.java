@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2008 Paul C. Buetow, smstrade@dev.buetow.org
+ * Copyright (c) 2008, 2009 Paul C. Buetow, smstrade@dev.buetow.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -58,16 +58,16 @@ public class SMain extends SFrame {
     private JTextArea textArea = new JTextArea();
 
     /** The send button */
-    private JButton sendButton = new JButton("Senden");
+    private JButton sendButton = new JButton("Send it");
 
     /** The clear button */
-    private JButton clearButton = new JButton("Löschen");
+    private JButton clearButton = new JButton("Delete");
 
     /** The counter label button */
     private JLabel counterLabel = new JLabel(" 160");
 
     /** The counter text label button */
-    private JLabel counterTextLabel = new JLabel("Zeichen");
+    private JLabel counterTextLabel = new JLabel("Chars");
 
     /** The button panel */
     private JPanel buttonPanel = new JPanel();
@@ -76,7 +76,7 @@ public class SMain extends SFrame {
     private JMenuBar menuBar = new JMenuBar();
 
     /** The file menu */
-    private JMenu fileMenu = new JMenu("Datei");
+    private JMenu fileMenu = new JMenu("File");
 
     /**
      * Instantiates a new SMain object.
@@ -105,21 +105,21 @@ public class SMain extends SFrame {
                 JMenuItem source = (JMenuItem) ae.getSource();
                 String text = source.getText();
 
-                if (text.equals("Einstellungen")) {
+                if (text.equals("Preferences")) {
                     new SPrefs(SMain.this, options);
 
-                } else if (text.equals("Beenden")) {
+                } else if (text.equals("Quit")) {
                     System.exit(0);
                 }
             }
         };
 
-        JMenuItem prefsItem = new JMenuItem("Einstellungen");
+        JMenuItem prefsItem = new JMenuItem("Preferences");
         prefsItem.addActionListener(listener);
         fileMenu.add(prefsItem);
 
         fileMenu.addSeparator();
-        JMenuItem exitItem = new JMenuItem("Beenden");
+        JMenuItem exitItem = new JMenuItem("Quit");
         exitItem.addActionListener(listener);
         fileMenu.add(exitItem);
 
@@ -213,7 +213,7 @@ public class SMain extends SFrame {
                         System.err.println(e);
                     }
 
-                } else if (text.equals("Löschen")) {
+                } else if (text.equals("Delete")) {
                     textArea.setText("");
                     buttonPanel.remove(2);
                     counterLabel = new JLabel(" 160");

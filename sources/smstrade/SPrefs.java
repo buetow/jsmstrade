@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2008 Paul C. Buetow, smstrade@dev.buetow.org
+ * Copyright (c) 2008, 2009 Paul C. Buetow, smstrade@dev.buetow.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -50,13 +50,13 @@ public class SPrefs extends SFrame {
     private JButton okButton = new JButton("OK");
 
     /** The save button */
-    private JButton saveButton = new JButton("Speichern");
+    private JButton saveButton = new JButton("Save");
 
     /**
      * Instantiates a new SMain object.
      */
     public SPrefs(Component parent, HashMap<String,String> options) {
-        super("Einstellungen", parent);
+        super("Preferences", parent);
         this.options = options;
 
         disposeWithParent();
@@ -101,7 +101,7 @@ public class SPrefs extends SFrame {
                     save();
                     dispose();
 
-                } else if (text.equals("Speichern")) {
+                } else if (text.equals("Save")) {
                     save();
                 }
             }
