@@ -1,5 +1,6 @@
 /*
- * Copyright (c) 2008, 2009 Paul C. Buetow, smstrade@dev.buetow.org
+ * Copyright (c) 2008, 2009 Dipl.-Inform. (FH) Paul C. Buetow
+ * jsmstrade@dev.buetow.org - http://jsmstrade.buetow.org
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
