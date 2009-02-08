@@ -1,3 +1,6 @@
+Mon Feb 8 - Changes from v0.2 -> v0.3
+	Fixed a major bug. JSMSTrade could not deliver any SMS messages.
+
 Mon Feb 2 - Changes from v0.1 -> v0.2
 	Default language is now english (used to be german)
 	Bugfix: If a message > 160 chars has been typed, the form will not
