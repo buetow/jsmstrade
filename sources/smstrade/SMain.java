@@ -1,4 +1,4 @@
-/* JSMSTrade v0.2
+/* JSMSTrade v0.3
  * Copyright (c) 2008, 2009 Dipl.-Inform. (FH) Paul C. Buetow
  * jsmstrade@dev.buetow.org - http://jsmstrade.buetow.org
  *
@@ -43,7 +43,7 @@ public class SMain extends SFrame {
     private static final int MESSAGE_MAX_LENGTH = 160;
 
     /** The program version */
-    private static final double VERSION = 0.2;
+    private static final double VERSION = 0.3;
 
     /** The save file */
     public static final String SAVE_FILE = "jsmstrade.dat";
@@ -189,7 +189,7 @@ public class SMain extends SFrame {
                 JButton source = (JButton) ae.getSource();
                 String text = source.getText();
 
-                if (text.equals("Senden")) {
+                if (text.equals("Send it")) {
                     String message = textArea.getText();
                     textArea.setText("");
                     buttonPanel.remove(2);
@@ -216,7 +216,8 @@ public class SMain extends SFrame {
                     } catch (Exception e) {
                         System.err.println(e);
                     }
-
+			
+                    buttonPanel.updateUI();
                 } else if (text.equals("Delete")) {
                     textArea.setText("");
                     buttonPanel.remove(2);
